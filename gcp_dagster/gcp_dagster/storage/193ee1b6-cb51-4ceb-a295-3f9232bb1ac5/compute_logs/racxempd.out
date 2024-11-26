@@ -1,0 +1,15 @@
+Running with dbt=1.8.8
+Registered adapter: bigquery=1.8.3
+Unable to do partial parsing because a project config has changed
+Found 16 models, 1 seed, 2 sources, 479 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START seed file wellbefore.BuyBox_raw_ds_first20_entries ................ [RUN]
+1 of 1 OK loaded seed file wellbefore.BuyBox_raw_ds_first20_entries ............ [[32mINSERT 20[0m in 8.32s]
+
+Finished running 1 seed in 0 hours 0 minutes and 10.21 seconds (10.21s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1

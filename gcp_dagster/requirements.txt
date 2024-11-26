@@ -1,0 +1,10 @@
+dagster
+dagit
+dagster-cloud
+dagster-dbt
+google-cloud-bigquery
+pandas
+pandas-gbq
+numpy
+dbt-core
+dbt-bigquery

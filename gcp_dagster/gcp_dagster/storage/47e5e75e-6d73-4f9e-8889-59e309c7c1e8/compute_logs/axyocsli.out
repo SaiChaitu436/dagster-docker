@@ -1,0 +1,61 @@
+Running with dbt=1.8.8
+Registered adapter: bigquery=1.8.3
+Unable to do partial parsing because a project config has changed
+Found 16 models, 1 seed, 2 sources, 479 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 17 START sql view model wellbefore.dim_all_columns ........................ [RUN]
+1 of 17 ERROR creating sql view model wellbefore.dim_all_columns ............... [[31mERROR[0m in 0.11s]
+2 of 17 START sql view model wellbefore.dim_all_columns_1_month ................ [RUN]
+2 of 17 OK created sql view model wellbefore.dim_all_columns_1_month ........... [[32mCREATE VIEW (0 processed)[0m in 2.03s]
+3 of 17 START sql view model wellbefore.dim_all_columns_using_join ............. [RUN]
+BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-437212&j=bq:US:8a7660a9-13c8-46ad-b955-621c14ecb619&page=queryresults
+3 of 17 ERROR creating sql view model wellbefore.dim_all_columns_using_join .... [[31mERROR[0m in 3.54s]
+4 of 17 START sql view model wellbefore.dim_offers_values ...................... [RUN]
+4 of 17 OK created sql view model wellbefore.dim_offers_values ................. [[32mCREATE VIEW (0 processed)[0m in 2.02s]
+5 of 17 START sql view model wellbefore.dim_summary_values ..................... [RUN]
+5 of 17 OK created sql view model wellbefore.dim_summary_values ................ [[32mCREATE VIEW (0 processed)[0m in 2.24s]
+6 of 17 START sql view model wellbefore.fct_sellers ............................ [RUN]
+6 of 17 OK created sql view model wellbefore.fct_sellers ....................... [[32mCREATE VIEW (0 processed)[0m in 1.95s]
+7 of 17 START sql table model wellbefore.src_buybox_offers ..................... [RUN]
+7 of 17 OK created sql table model wellbefore.src_buybox_offers ................ [[32mCREATE TABLE (44.0 rows, 120.8 KiB processed)[0m in 4.42s]
+8 of 17 START sql table model wellbefore.src_notification_lowest_prices ........ [RUN]
+8 of 17 OK created sql table model wellbefore.src_notification_lowest_prices ... [[32mCREATE TABLE (28.0 rows, 120.8 KiB processed)[0m in 4.49s]
+9 of 17 START sql table model wellbefore.src_notification_summary .............. [RUN]
+9 of 17 OK created sql table model wellbefore.src_notification_summary ......... [[32mCREATE TABLE (20.0 rows, 120.8 KiB processed)[0m in 4.56s]
+10 of 17 START sql table model wellbefore.src_notifications .................... [RUN]
+10 of 17 OK created sql table model wellbefore.src_notifications ............... [[32mCREATE TABLE (20.0 rows, 120.8 KiB processed)[0m in 4.62s]
+11 of 17 START sql table model wellbefore.src_offer_change_trigger ............. [RUN]
+11 of 17 OK created sql table model wellbefore.src_offer_change_trigger ........ [[32mCREATE TABLE (20.0 rows, 120.8 KiB processed)[0m in 4.37s]
+12 of 17 START sql table model wellbefore.src_offers ........................... [RUN]
+12 of 17 OK created sql table model wellbefore.src_offers ...................... [[32mCREATE TABLE (172.0 rows, 120.8 KiB processed)[0m in 4.54s]
+13 of 17 START sql table model wellbefore.src_products ......................... [RUN]
+13 of 17 OK created sql table model wellbefore.src_products .................... [[32mCREATE TABLE (20.0 rows, 120.8 KiB processed)[0m in 4.38s]
+14 of 17 START sql table model wellbefore.src_sales_ranking .................... [RUN]
+14 of 17 OK created sql table model wellbefore.src_sales_ranking ............... [[32mCREATE TABLE (43.0 rows, 120.8 KiB processed)[0m in 6.59s]
+15 of 17 START sql table model wellbefore.src_shipping ......................... [RUN]
+15 of 17 OK created sql table model wellbefore.src_shipping .................... [[32mCREATE TABLE (172.0 rows, 120.8 KiB processed)[0m in 4.71s]
+16 of 17 START seed file wellbefore.BuyBox_raw_ds_first20_entries .............. [RUN]
+16 of 17 OK loaded seed file wellbefore.BuyBox_raw_ds_first20_entries .......... [[32mINSERT 20[0m in 8.29s]
+17 of 17 START sql table model wellbefore.variable_summary_table ............... [RUN]
+17 of 17 OK created sql table model wellbefore.variable_summary_table .......... [[32mCREATE TABLE (2.1k rows, 120.8 KiB processed)[0m in 5.69s]
+
+Finished running 6 view models, 10 table models, 1 seed in 0 hours 1 minutes and 10.66 seconds (70.66s).
+
+[31mCompleted with 2 errors and 0 warnings:[0m
+
+  Compilation Error in model dim_all_columns (models/dim/dim_all_columns.sql)
+  Trying to create view `dbt-437212`.`wellbefore`.`dim_all_columns`, but it currently exists as a table. Either drop `dbt-437212`.`wellbefore`.`dim_all_columns` manually, or run dbt with `--full-refresh` and dbt will drop it for you.
+  
+  > in macro bigquery__handle_existing_table (macros/materializations/view.sql)
+  > called by macro handle_existing_table (macros/relations/view/replace.sql)
+  > called by macro bigquery__create_or_replace_view (macros/relations/view/replace.sql)
+  > called by macro materialization_view_bigquery (macros/materializations/view.sql)
+  > called by model dim_all_columns (models/dim/dim_all_columns.sql)
+
+  Database Error in model dim_all_columns_using_join (models/dim/dim_all_columns_using_join.sql)
+  CREATE VIEW has columns with duplicate name EventTime at [6:6]
+  compiled code at target/buy_box_gcp_1_dbt_assets-47e5e75-433377a/run/buy_box_gcp_1/models/dim/dim_all_columns_using_join.sql
+
+Done. PASS=15 WARN=0 ERROR=2 SKIP=0 TOTAL=17

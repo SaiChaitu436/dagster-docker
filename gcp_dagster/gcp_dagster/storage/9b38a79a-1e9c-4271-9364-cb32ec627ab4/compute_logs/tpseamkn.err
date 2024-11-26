@@ -1,0 +1,9 @@
+2024-11-25 14:44:34 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - 4837 - LOGS_CAPTURED - Started capturing logs in process (pid: 4837).
+2024-11-25 14:44:35 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - 4837 - run_dbt_seeds - STEP_START - Started execution of step "run_dbt_seeds".
+2024-11-25 14:44:36 +0000 - dagster - INFO - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - run_dbt_seeds - Copying `/app/buy_box_gcp_1/target/partial_parse.msgpack` to `/app/buy_box_gcp_1/target/41af247/partial_parse.msgpack` to take advantage of partial parsing.
+2024-11-25 14:44:37 +0000 - dagster - INFO - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - run_dbt_seeds - Running dbt command: `dbt run --select path:seeds`.
+2024-11-25 14:44:44 +0000 - dagster - INFO - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - run_dbt_seeds - Finished dbt command: `dbt run --select path:seeds`.
+2024-11-25 14:44:44 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - 4837 - run_dbt_seeds - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2024-11-25 14:44:44 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - run_dbt_seeds - Writing file at: /app/gcp_dagster/storage/9b38a79a-1e9c-4271-9364-cb32ec627ab4/run_dbt_seeds/result using PickledObjectFilesystemIOManager...
+2024-11-25 14:44:44 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - 4837 - run_dbt_seeds - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2024-11-25 14:44:44 +0000 - dagster - DEBUG - dbt_seed_pipeline - 9b38a79a-1e9c-4271-9364-cb32ec627ab4 - 4837 - run_dbt_seeds - STEP_SUCCESS - Finished execution of step "run_dbt_seeds" in 9.32s.

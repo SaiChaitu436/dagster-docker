@@ -1,0 +1,10 @@
+Running with dbt=1.8.8
+Registered adapter: bigquery=1.8.3
+Unable to do partial parsing because a project config has changed
+Found 16 models, 1 seed, 2 sources, 479 macros
+
+
+Finished running  in 0 hours 0 minutes and 0.02 seconds (0.02s).
+Encountered an error:
+Database Error
+  [Errno 2] No such file or directory: '/app/include/dbt-437212-4031e98ab84c.json'

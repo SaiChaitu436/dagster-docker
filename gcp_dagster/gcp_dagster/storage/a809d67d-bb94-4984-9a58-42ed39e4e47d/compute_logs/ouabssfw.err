@@ -1,0 +1,6 @@
+2024-11-25 14:49:57 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - 9430 - LOGS_CAPTURED - Started capturing logs in process (pid: 9430).
+2024-11-25 14:49:57 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - 9430 - provide_seeding_file_name - STEP_START - Started execution of step "provide_seeding_file_name".
+2024-11-25 14:49:57 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - 9430 - provide_seeding_file_name - STEP_OUTPUT - Yielded output "seeding_file_name" of type "String". (Type check passed).
+2024-11-25 14:49:57 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - provide_seeding_file_name - Writing file at: /app/gcp_dagster/storage/a809d67d-bb94-4984-9a58-42ed39e4e47d/provide_seeding_file_name/seeding_file_name using PickledObjectFilesystemIOManager...
+2024-11-25 14:49:57 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - 9430 - provide_seeding_file_name - HANDLED_OUTPUT - Handled output "seeding_file_name" using IO manager "io_manager"
+2024-11-25 14:49:58 +0000 - dagster - DEBUG - aggregation_job - a809d67d-bb94-4984-9a58-42ed39e4e47d - 9430 - provide_seeding_file_name - STEP_SUCCESS - Finished execution of step "provide_seeding_file_name" in 193ms.

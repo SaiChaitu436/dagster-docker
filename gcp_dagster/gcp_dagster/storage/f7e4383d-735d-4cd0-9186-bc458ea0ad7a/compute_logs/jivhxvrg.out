@@ -1,0 +1,15 @@
+Running with dbt=1.8.8
+Registered adapter: bigquery=1.8.3
+Unable to do partial parsing because a project config has changed
+Found 16 models, 1 seed, 2 sources, 479 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START sql table model wellbefore.src_offers ............................. [RUN]
+1 of 1 OK created sql table model wellbefore.src_offers ........................ [[32mCREATE TABLE (172.0 rows, 120.8 KiB processed)[0m in 4.18s]
+
+Finished running 1 table model in 0 hours 0 minutes and 5.85 seconds (5.85s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1

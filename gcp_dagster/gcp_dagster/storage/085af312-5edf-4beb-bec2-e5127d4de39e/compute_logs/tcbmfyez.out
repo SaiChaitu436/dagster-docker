@@ -1,0 +1,6 @@
+Running with dbt=1.8.8
+Registered adapter: bigquery=1.8.3
+Unable to do partial parsing because a project config has changed
+Found 16 models, 1 seed, 2 sources, 479 macros
+
+Nothing to do. Try checking your model configs and model specification args
